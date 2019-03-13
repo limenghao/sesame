@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>登录</title>
+</head>
+<style>
+    /*清除默认格式，以保证各浏览器的效果一致*/
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    /*
+    由于图片的长宽比与浏览器全屏时的长宽比不相匹配，
+    于是出现了实际背景只是原图片的一部分被放大的结果，美感大打折扣。
+    body{
+        background: url("img/background.jpg") no-repeat;
+    }
+    当浏览器不全屏显示时，页面下方出现了大片留白，非常不美观
+    .container{
+        background: url("img/background.jpg") no-repeat;
+        width: 100%;
+        height: 700px;
+        background-size:120%;
+    }*/
+    #web_bg{
+        background-image: url(./img/background.jpg);
+        position:fixed;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+        min-width: 1000px;
+        z-index:-10;
+        zoom: 1;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: center 0;
+    }
+    #modal_dialog{
+        position: relative;
+        left: 32%;
+        top: 100px;
+        background-color: white;
+        width: 450px;
+        height: 300px;
+        opacity: 0.6;
+    }
+    #title{
+        position: relative;
+        left: 45%;
+        top: -217px;
+        width: 120px;
+    }
+    .line{
+        margin-left: 40px;
+        font-family: 微软雅黑;
+        font-size: 12pt;
+        margin-top: 20px;
+    }
+    .line input,select{
+        border-radius: 2%;
+        -moz-box-shadow: inset 0 0 10px #CCC;
+        -webkit-box-shadow: inset 0 0 10px #CCC;
+        box-shadow: inset 0 0 10px #CCC;
+        border:1px solid #CCC;
+        line-height: 30px;
+        font-size: 1rem;
+        background-color: white;
+        opacity: 1;
+    }
+    select{
+        height: 30px;
+    }
+    .label{
+        display: inline-block;
+        width: 70px;
+        margin-left: 0;
+        padding-left:0;
+        text-align: right;
+    }
+    .myBtn{
+        background-color: #80c44a;
+        border: none;
+        border-radius: 10%;
+        width: 70px;
+        margin-left: 38%;
+        color: white;
+        font-family: 微软雅黑;
+        font-size:13pt;
+        line-height: 30px;
+    }
+    #logo{
+        position: relative;
+        left: 34%;
+        top: 30px;
+    }
+</style>
+<body>
+<div class="container">
+    <div id="web_bg"></div>
+    <img id="logo" src="img/logo.png" alt="logo"/>
+    <div id="modal_dialog">
+        <form>
+            <div class="line" style="padding-top: 80px;">
+                <div class="label">用户名：</div>
+                <input type="text" style="width: 100px;">
+                <select>
+                    <option>@163.com</option>
+                    <option>@qq.com</option>
+                </select>
+                <input type="checkbox">
+                <span style="font-size: 10pt">记住用户名</span>
+            </div>
+            <div class="line">
+                <div class="label">密码：</div>
+                <input type="password" style="width: 207px;">
+            </div>
+            <div class="line">
+                <div class="label">校验码：</div>
+                <img src="img/checkcode.png" width="100px" style="vertical-align: bottom" alt="验证码"/>
+                <input type="text" style="width: 100px;">
+            </div>
+            <div class="line">
+                <button class="myBtn" onclick="toPage()">登录</button>
+                <input type="checkbox">
+                <span style="font-size: 10pt">增强安全性</span>
+            </div>
+        </form>
+    </div>
+    <img src="img/title_03.png" id="title" alt="用户登录">
+</div>
+<script type="text/javascript" language="javascript">
+    function toPage() {
+        window.location.href="introduce_css.html";
+    }
+</script>
+</body>
+</html>
