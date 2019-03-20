@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>登录</title>
+    <meta charset="UTF-8">
+    <link href="css/common.css" rel="stylesheet">
+</head>
+<style>
+    #modal_dialog{
+        background-color: white;
+        /*水平垂直居中：设置宽度，左右外边距设为auto
+        设置为绝对位置，上下左右距离设为0*/
+        width: 450px;
+        height: 300px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.6;
+    }
+    #title{
+        position: relative;
+        left: 45%;
+        top: -217px;
+        width: 120px;
+    }
+    .myTit{
+        width: 100px;
+    }
+    .title{
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 微软雅黑;
+        margin-top: 5px;
+        font-weight: 600;
+        color: #225475;
+    }
+</style>
+<body>
+<div class="web_bg"></div>
+<div class="container">
+    <div id="modal_dialog">
+        <div class="title">用户登录</div>
+            <div class="line">
+                <div class="myTit"><label>用户名：</label></div>
+                <input type="text" style="width: 100px;">
+                <select>
+                    <option>@163.com</option>
+                    <option>@qq.com</option>
+                </select>
+                <input type="checkbox">
+                <span style="font-size: 10pt">记住用户名</span>
+            </div>
+            <div class="line">
+                <div class="myTit"><label>密码：</label></div>
+                <input type="password" style="width: 207px;">
+            </div>
+            <div class="line">
+                <div class="myTit"><label>校验码：</label></div>
+                <img src="img/checkcode.png" width="100px" style="vertical-align: bottom" alt="验证码"/>
+                <input type="text" style="width: 100px;">
+            </div>
+            <div class="line">
+                <button class="btn btn-login" onclick="LogIn()">登录</button>
+                <input type="checkbox">
+                <span style="font-size: 10pt">增强安全性</span>
+            </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function LogIn() {
+        window.location.href="mainPage.html";
+    }
+</script>
+</body>

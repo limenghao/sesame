@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日程安排</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/modalLog.css">
+</head>
+<style>
+
+    .table-container{
+        width: 95%;
+        margin: auto;
+    }
+    .schedule-table{
+        border:2px solid #225475;
+        width: 100%;
+    }
+    .schedule-table th{
+        font-size: 1.5rem;
+        vertical-align: middle;
+        text-align: center;
+        height: 40px;
+        border: 1px solid #225475;
+        width: 10%;
+        font-weight: 400;
+        font-family: 华文新魏;
+    }
+    /*.schedule-table th span{
+        font-size: 1rem;
+    }*/
+    .schedule-table td{
+        width: 10%;
+        height: 100px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #225475;
+    }
+    .tr-morning td{
+        /*background-color: rgba(86, 139, 175, 0.2);*/
+        color: #225475;
+    }
+    .tr-afternoon td{
+        /*background-color: rgba(243, 111, 3, 0.24);*/
+        color: white;
+    }
+    .tr-evening td{
+        /*background-color: rgba(86, 139, 175, 0.2);*/
+        color: #225475;
+    }
+    .btn-last{
+        float: left;
+        width: 85px;
+    }
+    .btn-next{
+        float: right;
+        width: 85px;
+    }
+    .btn{
+        background-color: #c0d7ff;
+        border: none;
+        border-radius: 10%;
+        color: #225475;
+        font-family: 华文新魏;
+        font-size:15pt;
+        line-height: 30px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    .btn:hover, .btn:focus{
+        background-color: #225475;
+        color: white;
+        font-weight: 500;
+    }
+    .myTit{
+        width: 130px;
+    }
+    .line select, .line input{
+        width: 50%;
+    }
+</style>
+<body>
+<div class="web_bg"></div>
+<div class="nav-top">
+    <ul class="nav">
+        <li class="drop-down">
+            <img class="more" src="img/menu_blue.png"/>
+            <ul class="drop-down-content">
+                <li class="active"><a href="mainPage.html">查看日程</a></li>
+                <li><a href="./checkPersonInfo.html">查看个人信息</a></li>
+                <li><a href="./setDefault.html">设置默认日程</a></li>
+                <li><a href="./setting.html">系统设置</a></li>
+                <li><a href="./userManage.html">用户管理</a></li>
+                <li><a href="./index.html">退出登录</a></li>
+            </ul>
+        </li>
+    </ul>
+    <img class="portrait" src="img/portrait.jpg"/>
+    <label class="user-name">张芝麻</label>
+</div>
+<div class="panel-schedule">
+    <div class="table-container">
+        <table class="schedule-table" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <th></th>
+                <th>星期一<br><span>2019-03-18</span></th>
+                <th>星期二<br><span>2019-03-19</span></th>
+                <th>星期三<br><span>2019-03-20</span></th>
+                <th>星期四<br><span>2019-03-21</span></th>
+                <th>星期五<br><span>2019-03-22</span></th>
+                <th>星期六<br><span>2019-03-23</span></th>
+                <th>星期日<br><span>2019-03-24</span></th>
+            </tr>
+            <tr class="tr-morning">
+                <th>上午</th>
+                <td onclick="pop_box()">
+                    <label class="place">校本部</label><br>
+                    <label class="item">开会</label>
+                </td>
+                <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr class="tr-afternoon"><th>下午</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr class="tr-evening"><th>晚上</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+    <!-- 弹出模态框 -->
+    <div class="div-container" id="div-container" style="display: none;">
+        <div class="div-child-container">
+            <div class="modal_head">
+                <label>编辑默认日程</label>
+            </div>
+            <hr>
+            <div class="div-child">
+                <div class="line" style="margin-top: 30px">
+                    <div class="myTit"><label>开始时间：</label></div>
+                    <input type="datetime">
+                </div>
+                <div class="line" style="margin-top: 30px">
+                    <div class="myTit"><label>结束时间：</label></div>
+                    <input type="datetime">
+                </div>
+                <div class="line" style="margin-top: 30px">
+                    <div class="myTit"><label>事项：</label></div>
+                    <select>
+                        <option>开会</option>
+                        <option>办公</option>
+                    </select>
+                </div>
+                <div class="line" style="margin-top: 30px">
+                    <div class="myTit"><label>地点：</label></div>
+                    <select>
+                        <option>校本部</option>
+                        <option>大兴校区</option>
+                    </select>
+                </div>
+                <div class="btn-block">
+                    <button class="btn btn-cancel" style="float: right" id="cancelBtn" onclick="cancel()">取消</button>
+                    <button class="btn-sure" style="float: right" id="confirm" onclick="confirm()">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/modalLog.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</html>

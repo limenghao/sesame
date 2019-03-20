@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日程安排</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<style>
+    .table-container{
+        width: 95%;
+        margin: auto;
+    }
+    .schedule-table{
+        border:2px solid #225475;
+        width: 100%;
+    }
+    .schedule-table th{
+        font-size: 1.5rem;
+        vertical-align: middle;
+        text-align: center;
+        height: 40px;
+        border: 1px solid #225475;
+        width: 10%;
+        font-weight: 400;
+        font-family: 华文新魏;
+    }
+    /*.schedule-table th span{
+        font-size: 1rem;
+    }*/
+    .schedule-table td{
+        width: 10%;
+        height: 100px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #225475;
+    }
+    .tr-morning td{
+        /*background-color: rgba(86, 139, 175, 0.2);*/
+        color: #225475;
+    }
+    .tr-afternoon td{
+        /*background-color: rgba(243, 111, 3, 0.24);*/
+        color: white;
+    }
+    .tr-evening td{
+        /*background-color: rgba(86, 139, 175, 0.2);*/
+        color: #225475;
+    }
+    .btn-last{
+        float: left;
+        width: 85px;
+    }
+    .btn-next{
+        float: right;
+        width: 85px;
+    }
+</style>
+<body>
+    <div class="web_bg"></div>
+    <div class="nav-top">
+        <!--<div id="menu">
+            <img class="more" src="img/menu_blue.png"/>
+            <ul class="menu_list" id="menu_content">
+                <li><a>查看个人信息</a></li>
+                <li><a>设置默认日程</a></li>
+                <li><a>退出登录</a></li>
+            </ul>
+        </div>-->
+        <ul class="nav">
+            <li class="drop-down">
+                <img class="more" src="img/menu_blue.png"/>
+                <ul class="drop-down-content">
+                    <li class="active"><a href="mainPage.html">查看日程</a></li>
+                    <li><a href="./checkPersonInfo.html">查看个人信息</a></li>
+                    <li><a href="./setDefault.html">设置默认日程</a></li>
+                    <li><a href="./setting.html">系统设置</a></li>
+                    <li><a href="./userManage.html">用户管理</a></li>
+                    <li><a href="./index.html">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img class="portrait" src="img/portrait.jpg"/>
+        <label class="user-name">张芝麻</label>
+    </div>
+    <div class="panel-schedule">
+        <div class="line" style="padding-left: 30px">
+            <label>选择部门：</label>
+            <select>
+                <optgroup label="选择部门">
+                    <option>教务办</option>
+                    <option>学工办</option>
+                </optgroup>
+            </select>
+            <label style="margin-left: 10%">选择用户：</label>
+            <select>
+                <optgroup label="选择用户">
+                    <option>张三</option>
+                    <option>李四</option>
+                </optgroup>
+            </select>
+            <label style="margin-left: 10%">跳转日期：</label>
+            <input type="date">
+            <button class="btn">跳转</button>
+        </div>
+        <div class="table-container">
+            <table class="schedule-table" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th></th>
+                    <th>星期一<br><span>2019-03-18</span></th>
+                    <th>星期二<br><span>2019-03-19</span></th>
+                    <th>星期三<br><span>2019-03-20</span></th>
+                    <th>星期四<br><span>2019-03-21</span></th>
+                    <th>星期五<br><span>2019-03-22</span></th>
+                    <th>星期六<br><span>2019-03-23</span></th>
+                    <th>星期日<br><span>2019-03-24</span></th>
+                </tr>
+                <tr class="tr-morning">
+                    <th>上午</th>
+                    <td>
+                        <label class="place">校本部</label><br>
+                        <label class="item">开会</label>
+                    </td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr class="tr-afternoon"><th>下午</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr class="tr-evening"><th>晚上</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </table>
+            <button class="btn btn-last">←上一周</button>
+            <button class="btn btn-next">下一周→</button>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</html>

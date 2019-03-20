@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统设置</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<style>
+    .table-container{
+        width: 95%;
+        margin: auto;
+    }
+    .schedule-table{
+        border:2px solid #225475;
+        width: 100%;
+    }
+    .schedule-table th{
+        font-size: 1.5rem;
+        vertical-align: middle;
+        text-align: center;
+        height: 40px;
+        border: 1px solid #225475;
+        width: 10%;
+        font-weight: 400;
+        font-family: 华文新魏;
+    }
+    .schedule-table td{
+        width: 10%;
+        height: 50px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #225475;
+    }
+</style>
+<body>
+<div class="web_bg"></div>
+<div class="nav-top">
+    <ul class="nav">
+        <li class="drop-down">
+            <img class="more" src="img/menu_blue.png"/>
+            <ul class="drop-down-content">
+                <li class="active"><a href="mainPage.html">查看日程</a></li>
+                <li><a href="./checkPersonInfo.html">查看个人信息</a></li>
+                <li><a href="./setDefault.html">设置默认日程</a></li>
+                <li><a href="./setting.html">系统设置</a></li>
+                <li><a href="./userManage.html">用户管理</a></li>
+                <li><a href="./index.html">退出登录</a></li>
+            </ul>
+        </li>
+    </ul>
+    <img class="portrait" src="img/portrait.jpg"/>
+    <label class="user-name">张芝麻</label>
+</div>
+<div class="panel-schedule">
+    <div class="line" style="padding-left: 30px">
+        <label>系统参数表</label>
+    </div>
+    <div class="table-container">
+        <table class="schedule-table" border="0" cellspacing="0" cellpadding="0">
+            <tr><th>序号</th><th>参数名称</th><th>类型</th><th>值</th><th>操作</th></tr>
+            <tr><td>1</td><td>可设置时间</td><td>VARCHAR</td><td>08:00-22:00</td>
+                <td><button class="btn">修改</button></td></tr>
+            <tr><td>2</td><td>待填写日程周期(天数)</td><td>NUMBER</td><td>7</td>
+                <td><button class="btn">修改</button></td></tr>
+            <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</html>
