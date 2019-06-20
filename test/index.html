@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .father{
+        position: relative;
+        width: 500px;
+        height: 300px;
+        margin: auto auto 2rem;
+        background: lightcyan;
+    }
+    .item{
+        background: indianred;
+    }
+    .center1{
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .square1{
+        width: 250px;
+        height: 250px;
+    }
+    .center2 .item{
+        position: absolute;
+        margin: auto;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .square2{
+        width: 50%;
+        padding-top:50%;
+        height: 0;
+    }
+    .center3 .item{
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+
+
+</style>
+<body>
+<div class="father center1">
+    <div class="item square1"></div>
+</div>
+<div class="father center2">
+    <div class="item square2"></div>
+</div>
+<div class="father center3">
+    <div class="item square2"></div>
+</div>
+
+</body>
+</html>
